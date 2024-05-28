@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+t<!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset="UTF-8">
@@ -15,10 +15,10 @@
   <body style="text-align:center;">
 
     <header class="page-header" role="banner" style="padding-bottom:0px">
-      <h1 class="project-name">Vine Growth Generator</h1>
-      <h2>using Space Colonization Algorithms</h2>
+      <h1 class="project-name">Real-Time Scribble Shading</h1>
+      <h2>Replacing the Standard Lighting Model with a Stylized Hatching Effect</h2>
       {% if site.github.is_project_page %}
-        <a href="https://github.com/KarimTantawy/Procedural-Vine-Growth-Project" class="btn">View on GitHub</a>
+        <a href="https://github.com/AdamKhaddaj/ScribbleRendering" class="btn">View on GitHub</a>
       {% endif %}
       {% if site.show_downloads %}
         <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
@@ -31,28 +31,27 @@
         <h1 style="font-size:32px">Summary</h1>
       </header>
       <p style="padding-left:400px; padding-right:400px">
-        This project presents a 2D vine growth generator and renderer that stores the traversal of vines growths in UV space, and renders these vines onto textures in real-time.
+        This project introduces a system that evokes the visual style of pencil-drawn imagery by replacing the standard lighting model with a hatching effect that reacts to lighting in real-time. Texturing is done in object-space, meaning that hatching strokes will bend around 3D models to further communicate form and depth.
         <br><br>
-        This is primarily achieved through an implementation of Space Colonization Algorithms, first introduced by <a href="http://algorithmicbotany.org/papers/colonization.egwnp2007.large.pdf">Runions et al.</a>
+        This effect is primarily achieved by generating and implementing hierarchical hatching textures called Tonal Art Maps (TAMS), first introduced by <a href="https://hhoppe.com/hatching.pdf">Praun et al.</a>, which adhere to a "nesting stroke property" that preserves stroke locations across tone and mipmap levels.
         <br><br>
-        This project also implements a simple interface through the Unity inspector that allows users to tweak several paramters for altering growth behaviours, including branching frequency, inclusion/exclusion zones, leaf generation, vine overlap, vine thickness, and more.
+        By combining different TAMs together during texturing, an interesting scribble effect is achieved. Additional effects are implemented through the use of noise, Sobel filter outlines, and more.
         <br><br>
-        Instructions for installing and using this tool can be found <a href="https://github.com/KarimTantawy/Procedural-Vine-Growth-Project/tree/main">here</a> on the "Set-Up Instructions" pdf.
-        <br><br>
-        A more thorough breakdown of this project can be found <a href="https://github.com/KarimTantawy/Procedural-Vine-Growth-Project/blob/main/COMP4900_FinalProjectReport.pdf">here</a>.
-        <br><br>
-        All scripts and shaders were created by Adam Khaddaj and <a href="https://github.com/KarimTantawy">Karim Tantawy</a>
+        All scripts and shaders were created by Adam Khaddaj.
       </p>
+      <header>
+        <h1 style="font-size:32px">Video Showcasing the Effect in Real-Time</h1>
+      </header>
+      <iframe width="830" height="485" src="https://www.youtube.com/embed/rtGS34lBRqE?si=IZFhdJ23UN3GjtIb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <header>
         <h1 style="font-size:32px">Screenshots</h1>
       </header>
-      <img src="Images/VinesGrowOverWindow.png" alt="Image" width="500" height="500">
-      <img src="Images/vinesKillOffset.PNG" alt="Image" width="500" height="500">
-      <img src="Images/UVLayout.png" alt="Image" width="1000" height="500">
-      <img src="Images/bunny2.png" alt="Image" width="500" height="500">
-      <img src="Images/bunny3.png" alt="Image" width="500" height="500">
-      <img src="Images/overlapAndSpaceCompeteMIx.PNG" alt="Image" width="500" height="500">
-      <img src="Images/heart.gif" alt="Image" width="500" height="500">
+      <img src="sphere_IDK.PNG" alt="Image" width="500" height="500">
+      <img src="handBetter.PNG" alt="Image" width="500" height="500">
+      <img src="rabits.PNG" alt="Image" width="1000" height="500">
+      <img src="bodyDarkSideBette.PNG" alt="Image" width="500" height="500">
+      <img src="elephantBetter.PNG" alt="Image" width="500" height="500">
+      <img src="manyhatchthings.PNG" alt="Image" width="1000" height="500">
       <footer class="site-footer">
         {% if site.github.is_project_page %}
           <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
